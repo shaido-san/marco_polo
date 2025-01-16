@@ -1,0 +1,29 @@
+# Python関連
+*.pyc
+*.pyo
+__pycache__/
+
+# Environment/virtualenv関連
+env/
+venv/
+ENV/
+.venv/
+
+# Django関連
+db.sqlite3
+*.sqlite3
+secrets/
+*.env
+
+# その他
+*.log
+*.pot
+*.py[cod]
+*.so
+.DS_Store
+*.coverage
+*.egg
+*.egg-info
+dist/
+build/
+*.~*
