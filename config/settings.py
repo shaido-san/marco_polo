@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,7 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 root = environ.Path(BASE_DIR / 'secrets')
 
-# 本番環境用 if文で分岐する env.read_env(root('.env.prod'))
+# 本番環境用 
+
+# if文で分岐する env.read_env(root('.env.prod'))
 
 
 # 開発環境用 
@@ -132,6 +135,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
