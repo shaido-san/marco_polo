@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# ベースのアプリケーションからviews(フォルダ)をインポートする
+from base import views
 # from django.conf import settings
 # from django.conf.urls.static import static
 # from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -27,4 +29,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # トップページ
+    path('', views.IndexListView.as_view()),
 ]
