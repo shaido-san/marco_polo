@@ -2,14 +2,16 @@
 
 {% block main %}
 
-{% for object in object_list %}
+{% include 'common/headline.html' %}
 
-<p>
-    <a href="/items/{{object.pk}}/">
-        {{object.name}} - ¥{{object.price}}
-    </a>
-</p>
 
-{% endfor %}
-
+<div class="container px-1" style="max-width:100%">
+    <div class="row my-6">
+        {% for object in object_list %}
+        <div class="col-12 col-lg-2 my-2">
+            {% include 'common/item_list.html'%}
+        </div>
+        {% endfor %}
+   </div>
+</div>
 {% endblock %}
